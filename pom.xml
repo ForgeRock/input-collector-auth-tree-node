@@ -24,7 +24,7 @@
 
     <artifactId>input-collector-auth-tree-node</artifactId>
     <groupId>org.forgerock.am</groupId>
-    <version>6.0.0-SNAPSHOT</version>
+    <version>5.0.0</version>
     
     <name>Input Collector Authentication Tree Node</name>
     <description>An Authentication Tree Node for ForgeRock's Identity Platform</description>
