@@ -37,7 +37,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.forgerock.am</groupId>
-                <artifactId>auth-tree-node-parent</artifactId>
+                <artifactId>openam-auth-trees</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
                 <version>${am.version}</version>
