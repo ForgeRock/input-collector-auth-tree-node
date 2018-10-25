@@ -22,7 +22,6 @@
 package org.forgerock.openam.auth.nodes;
 
 import static java.util.Arrays.asList;
-import static org.forgerock.openam.core.realms.Realm.root;
 
 import javax.inject.Inject;
 

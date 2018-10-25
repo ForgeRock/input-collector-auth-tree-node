@@ -13,32 +13,35 @@
  *
  * Copyright 2017 ForgeRock AS.
 -->
-# Input Collector Authentication Tree Node
-A simple authentication node for ForgeRock's [Identity Platform][forgerock_platform] 5.5 and above. This node gathers one of more user inputs. A more generic version of the username collector node which allows one of more input fields to be defined. User inputs are added as individual shared state values.
-## Installation
+# Input Collector Authentication Node
+
+A simple authentication node that collects a user input and stores result in shared or transient state. A more generic version of the username and password collector nodes.
+
+#### Installation
 
 Copy the .jar file from the ../target directory into the ../web-container/webapps/openam/WEB-INF/lib directory where AM is deployed.  Restart the web container to pick up the new node.  The node will then appear in the authentication trees components palette.
-## Usage
 
-Deploy the node and set appropriate key/value pairs where  
-key: name of the authentication shared state object for an input field (e.g., policyNumber)  
-value: user prompt (e.g., "Policy Number")
-## To Build
+#### Usage
 
-The code in this repository has binary dependencies that live in the ForgeRock maven repository. Maven can be configured to authenticate to this repository by following the following [ForgeRock Knowledge Base Article](https://backstage.forgerock.com/knowledge/kb/article/a74096897).
+Deploy the node and set appropriate config values where:
 
-Edit the necessary InputCollectorNode.java as appropriate.  To rebuild, run "mvn clean install" in the directory containing the pom.xml  
+- Variable Name: name of the shared state or transient shared state object to store the users input.
+- Prompt: user prompt to display. Can be either a static value or a shared state variable enclosed in double braces, e.g., {{prompt}}
+- Password: set to true to use a Password callback which normally causes user input to be hidden when typed.
+- Use Transient State: set to true to store password values in transient state.
 
-![ScreenShot](./properties.png)  
+Note: this replaces a previous version of the Input Collector Node which allowed multiple inputs to be collected. It's recommended instead to use this node in combination with a Page Node to achieve the same result.
 
+#### To Build
 
-![Screenshot](./screenshot.png)  
+Edit the necessary InputCollectorNode.java as appropriate.  To rebuild, run "mvn clean install" in the directory containing the pom.xml
 
-## Disclaimer
+![Screenshot](./screenshot.png)
+
+####Disclaimer
+
 The sample code described herein is provided on an "as is" basis, without warranty of any kind, to the fullest extent permitted by law. ForgeRock does not warrant or guarantee the individual success developers may have in implementing the sample code on their development platforms or in production configurations.
 
 ForgeRock does not warrant, guarantee or make any representations regarding the use, results of use, accuracy, timeliness or completeness of any data or information relating to the sample code. ForgeRock disclaims all warranties, expressed or implied, and in particular, disclaims all warranties of merchantability, and warranties related to the code, or any service or software related thereto.
 
 ForgeRock shall not be liable for any direct, indirect or consequential damages or costs of any type arising out of any action taken by you or others related to the sample code.
-
-[forgerock_platform]: https://www.forgerock.com/platform/
