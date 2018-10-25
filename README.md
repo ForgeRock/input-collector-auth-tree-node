@@ -13,41 +13,33 @@
  *
  * Copyright 2017 ForgeRock AS.
 -->
-<b>Input Collector Authentication Node</b>
-<br/>
+# Input Collector Authentication Node
+
 A simple authentication node that collects a user input and stores result in shared or transient state. A more generic version of the username and password collector nodes.
-<br/>
-<br/>
-<b>Installation</b>
-<br/>
+
+#### Installation
+
 Copy the .jar file from the ../target directory into the ../web-container/webapps/openam/WEB-INF/lib directory where AM is deployed.  Restart the web container to pick up the new node.  The node will then appear in the authentication trees components palette.
-<br/>
-<br/>
-<b>Usage</b>
-<br/>
+
+#### Usage
+
 Deploy the node and set appropriate config values where:
-<br/>
+
 - Variable Name: name of the shared state or transient shared state object to store the users input.
-<br/>
 - Prompt: user prompt to display. Can be either a static value or a shared state variable enclosed in double braces, e.g., {{prompt}}
-<br/>
 - Password: set to true to use a Password callback which normally causes user input to be hidden when typed.
-<br/>
 - Use Transient State: set to true to store password values in transient state.
-<br/>
-<br/>
+
 Note: this replaces a previous version of the Input Collector Node which allowed multiple inputs to be collected. It's recommended instead to use this node in combination with a Page Node to achieve the same result.
-<br/>
-<br/>
-<b>To Build</b>
-<br/>
+
+#### To Build
+
 Edit the necessary InputCollectorNode.java as appropriate.  To rebuild, run "mvn clean install" in the directory containing the pom.xml
-<br/>
-<br/>
-<br/>
+
 ![Screenshot](./screenshot.png)
-<br/>
-<b>Disclaimer</b>
+
+####Disclaimer
+
 The sample code described herein is provided on an "as is" basis, without warranty of any kind, to the fullest extent permitted by law. ForgeRock does not warrant or guarantee the individual success developers may have in implementing the sample code on their development platforms or in production configurations.
 
 ForgeRock does not warrant, guarantee or make any representations regarding the use, results of use, accuracy, timeliness or completeness of any data or information relating to the sample code. ForgeRock disclaims all warranties, expressed or implied, and in particular, disclaims all warranties of merchantability, and warranties related to the code, or any service or software related thereto.
