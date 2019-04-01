@@ -35,7 +35,8 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.PasswordCallback;
 
 import static org.forgerock.openam.auth.node.api.Action.send;
-import org.forgerock.guava.common.base.Strings;
+//import org.forgerock.guava.common.base.Strings;
+import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
