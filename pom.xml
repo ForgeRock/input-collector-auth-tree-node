@@ -71,7 +71,7 @@
 	      </snapshots>
 	      <id>forgerock-internal-releases</id>
 	      <name>ForgeRock Release Repository</name>
-	      <url>http://maven.forgerock.org/repo/internal-releases</url>
+	      <url>http://maven.forgerock.org/artifactory/internal-releases</url>
 	    </repository>
 	    <repository>
 	      <snapshots>
@@ -79,7 +79,7 @@
 	      </snapshots>
 	      <id>forgerock-private-releases</id>
 	      <name>ForgeRock Private Release Repository</name>
-	      <url>http://maven.forgerock.org/repo/private-releases</url>
+	      <url>http://maven.forgerock.org/artifactory/private-releases</url>
 	    </repository>
 	    <repository>
 	      <releases>
@@ -90,7 +90,7 @@
 	      </snapshots>
 	      <id>forgerock-internal-snapshots</id>
 	      <name>ForgeRock Snapshot Repository</name>
-	      <url>http://maven.forgerock.org/repo/internal-snapshots</url>
+	      <url>http://maven.forgerock.org/artifactory/internal-snapshots</url>
 	    </repository>
 	    <repository>
 	      <releases>
@@ -101,7 +101,7 @@
 	      </snapshots>
 	      <id>maven.forgerock.org</id>
 	      <name>maven.forgerock.org-openam-dependencies</name>
-	      <url>http://maven.forgerock.org/repo/openam-dependencies</url>
+	      <url>http://maven.forgerock.org/artifactory/openam-dependencies</url>
 	    </repository>
 	    <repository>
 	      <releases>
@@ -112,7 +112,7 @@
 	      </snapshots>
 	      <id>restlet-cache</id>
 	      <name>Restlet Cache Repository</name>
-	      <url>http://maven.forgerock.org/repo/maven.restlet.org</url>
+	      <url>http://maven.forgerock.org/artifactory/maven.restlet.org</url>
 	    </repository>
 	    <repository>
 	      <snapshots>
@@ -125,7 +125,7 @@
 	    <repository>
 	      <id>forgerock-internal</id>
 	      <name>Forgerock Internal Repository</name>
-	      <url>http://maven.forgerock.org/repo/internal</url>
+	      <url>http://maven.forgerock.org/artifactory/internal</url>
 	    </repository>
 	    <repository>
 	      <snapshots>
