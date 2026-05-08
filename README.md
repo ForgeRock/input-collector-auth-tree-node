@@ -32,6 +32,20 @@ Deploy the node and set appropriate config values where:
 
 Note: this replaces a previous version of the Input Collector Node which allowed multiple inputs to be collected. It's recommended instead to use this node in combination with a Page Node to achieve the same result.
 
+<!-- SUPPORT -->
+## Support
+
+If you encounter any issues, be sure to check our https://docs.pingidentity.com/ pages.
+
+Support tickets can be raised whenever you need our assistance; here are some examples of when it is appropriate to open a ticket (but not limited to):
+
+* Suspected bugs or problems with Ping Identity software.
+* Requests for assistance
+
+You can raise a ticket using **[Ping Identity Support Portal](https://support.pingidentity.com/s/)**, our customer support portal that provides one stop access to Ping Identity services.
+
+<!-- COLLABORATION -->
+
 #### To Build
 
 Edit the necessary InputCollectorNode.java as appropriate.  To rebuild, run "mvn clean install" in the directory containing the pom.xml
