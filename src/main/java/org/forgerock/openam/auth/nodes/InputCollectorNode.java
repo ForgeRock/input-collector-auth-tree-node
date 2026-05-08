@@ -39,7 +39,7 @@ import static org.forgerock.openam.auth.node.api.Action.send;
 import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.forgerock.openam.auth.node.api.NodeState;
 /**
  * A node which collects a username from the user via a name callback.
  *
@@ -81,6 +81,8 @@ public class InputCollectorNode extends SingleOutcomeNode {
     @Override
     public Action process(TreeContext context) {
 
+        NodeState ns = context.getStateFor(this);
+
         String prompt = config.prompt();
         if ((prompt.indexOf("{{") == 0) && (prompt.indexOf("}}") == (prompt.length()-2))) {
             prompt = context.sharedState.get(prompt.substring(2,prompt.length()-2)).asString();
@@ -97,11 +99,15 @@ public class InputCollectorNode extends SingleOutcomeNode {
                     .map(password -> {
                         if (config.useTransient()) {
                             logger.debug("[InputCollectorNode]: Storing user password input in transient shared state " + config.variable());
-                            return goToNext().replaceTransientState(context.transientState.copy().put(config.variable(), password)).build();
+
+                            ns.putTransient( config.variable(), password);
+
+                            return goToNext().build();
                         }
                         else {
                             logger.debug("[InputCollectorNode]: Storing user password input in shared state " + config.variable());
-                            return goToNext().replaceSharedState(context.sharedState.copy().put(config.variable(), password)).build();
+                            ns.putShared(config.variable(), password);
+                            return goToNext().build();
                         }
                     })
                     .orElseGet(() -> {
